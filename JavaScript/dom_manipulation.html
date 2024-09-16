@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Example</title>
+    <style>
+      #container {
+        border: 3px solid black;
+        padding: 10px;
+      }
+      .box {
+        background-color: lightgray;
+        padding: 20px;
+        margin: 10px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Original Header</h1>
+    <div id="container">
+      <p class="box">First box</p>
+      <p class="box">Second box</p>
+    </div>
+    <button id="addBtn">Add New Element</button>
+
+    <script>
+      // Select elements
+      const header = document.getElementById("header");
+      const container = document.getElementById("container");
+      const addBtn = document.getElementById("addBtn");
+
+      // Modify existing content
+      header.textContent = "Updated Header";
+
+      // Modify styles
+      container.style.borderColor = "green";
+
+      // Add a new element when the button is clicked
+      addBtn.addEventListener("click", () => {
+        // Create a new paragraph element
+        const newBox = document.createElement("p");
+        newBox.classList.add("box");
+        newBox.textContent = "This is a new box added to the container.";
+
+        // Add the new element to the container
+        container.appendChild(newBox);
+      });
+    </script>
+  </body>
+</html>

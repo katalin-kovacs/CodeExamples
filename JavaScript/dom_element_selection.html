@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Element Selection</title>
+    <style>
+      .list-item {
+        color: blue;
+      }
+      .container p {
+        background-color: lightgray;
+        padding: 5px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with an ID -->
+    <h1 id="header">DOM Element Selection Example</h1>
+
+    <!-- List items with a class name -->
+    <ul>
+      <li class="list-item">List Item 1</li>
+      <li class="list-item">List Item 2</li>
+      <li class="list-item">List Item 3</li>
+    </ul>
+
+    <!-- Container with multiple paragraphs -->
+    <div class="container">
+      <p>Paragraph 1 inside container</p>
+      <p>Paragraph 2 inside container</p>
+    </div>
+
+    <!-- Script demonstrating element selection -->
+    <script>
+      // Select an element by ID
+      const elementById = document.getElementById("header");
+      console.log("Element selected by ID:", elementById);
+
+      // Select elements by class name (returns a live HTMLCollection)
+      const elementsByClass = document.getElementsByClassName("list-item");
+      console.log("Elements selected by class name (list-item):", elementsByClass);
+
+      // Select elements by tag name (returns a live HTMLCollection)
+      const elementsByTag = document.getElementsByTagName("p");
+      console.log("Elements selected by tag name (p):", elementsByTag);
+
+      // Select a single element using a CSS selector (returns the first match)
+      const elementBySelector = document.querySelector(".container p");
+      console.log("First element selected by querySelector (CSS .container p):", elementBySelector);
+
+      // Select multiple elements using a CSS selector (returns a NodeList)
+      const elementsBySelectorAll = document.querySelectorAll(".container p");
+      console.log(
+        "All elements selected by querySelectorAll (CSS .container p):",
+        elementsBySelectorAll
+      );
+    </script>
+  </body>
+</html>
