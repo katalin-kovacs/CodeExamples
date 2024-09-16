@@ -1,0 +1,38 @@
+<!-- Attaching/Removing Events -->
+<!-- In JavaScript, you can use addEventListener() 
+to attach an event to an element, 
+and removeEventListener() to remove the event. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Example</title>
+  </head>
+  <body>
+    <button id="myButton">Click Me</button>
+    <button id="removeButton">Remove Event</button>
+    <p id="message">Button has not been clicked.</p>
+
+    <script>
+      const button = document.getElementById("myButton");
+      const removeButton = document.getElementById("removeButton");
+      const message = document.getElementById("message");
+
+      // Event handler function
+      function handleClick() {
+        message.textContent = "Button was clicked!";
+      }
+
+      // Add event listener to the button
+      button.addEventListener("click", handleClick);
+
+      // Remove the event listener on a different button click
+      removeButton.addEventListener("click", () => {
+        button.removeEventListener("click", handleClick);
+        message.textContent = "Event listener removed.";
+      });
+    </script>
+  </body>
+</html>

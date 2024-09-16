@@ -1,0 +1,39 @@
+<!-- Handling Events -->
+<!-- An event handler is a function that gets executed when 
+the event occurs. It can access information about the event itself, 
+like which key was pressed or the mouse position, through the event object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Button Example</title>
+    <style>
+      button {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="colorButton">Change Color</button>
+    <p id="colorMessage">Click the button to change its color.</p>
+
+    <script>
+      const colorButton = document.getElementById("colorButton");
+      const colorMessage = document.getElementById("colorMessage");
+
+      // Event handler to change the button's background color
+      colorButton.addEventListener("click", function () {
+        // Generate a random color
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+        // Apply the random color to the button's background
+        colorButton.style.backgroundColor = randomColor;
+
+        // Update the message to show the selected color
+        colorMessage.textContent = `Button color changed to: ${randomColor}`;
+      });
+    </script>
+  </body>
+</html>
