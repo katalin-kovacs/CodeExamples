@@ -1,5 +1,9 @@
 # How to run the scripts
 
+## Install Node.js
+
+[Nodejs.org](https://nodejs.org/en/download/package-manager)
+
 ## From Command line
 
 Navigate to the folder your script is located. You can use `ls` to list Folders and Files, and `cd` to change directory.
