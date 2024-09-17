@@ -79,7 +79,6 @@ getData();
 // ------------------------------------------------------------------------
 // Fetching Data from an API Using async/await
 
-// Fetch data from an API using async/await
 async function fetchAPIData() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");

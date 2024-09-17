@@ -34,9 +34,9 @@ console.log(third); // 3
 // You can provide default values when destructuring,
 // in case a property or value doesn't exist.
 
-const person = { name: "John" };
+const person2 = { name: "John" };
 
 // 'age' is missing, so a default value is assigned
-const { name, age = 25 } = person;
+const { name2, age2 = 25 } = person2;
 
-console.log(age); // 25 (default value)
+console.log(age2); // 25 (default value)

@@ -36,7 +36,8 @@ console.log(str); // "42"
 console.log(typeof str); // "string"
 
 // String Object Constructor
-// This creates a string object (which is not a primitive string) using the new String() constructor. It is not recommended for general use because it creates an object, not a primitive string.
+// This creates a string object (which is not a primitive string) using the new String() constructor.
+// It is not recommended for general use because it creates an object, not a primitive string.
 let num = 42;
 let strObj = new String(num); // Using String object constructor
 console.log(strObj); // [String: '42']

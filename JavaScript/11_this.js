@@ -33,7 +33,7 @@ console.log(person1.name); // Output: Bob
 // Arrow Function
 // Arrow functions do not have their own this context.
 // Instead, they inherit this from the surrounding lexical context.
-const person = {
+const person2 = {
   name: "Charlie",
   greet: function () {
     // Arrow function
@@ -43,7 +43,7 @@ const person = {
   },
 };
 
-person.greet(); // Output: Charlie
+person2.greet(); // Output: Charlie
 
 // -------------------------------------------
 // Common pitfalls and how to avoid them
@@ -51,9 +51,7 @@ person.greet(); // Output: Charlie
 // Arrow Functions and this
 // Since arrow functions do not have their own this,
 // they can be useful to avoid common pitfalls with this binding,
-// particularly in callbacks.
-
-// Example:
+// particularly in callbacks.// Example:
 function Counter() {
   this.count = 0;
 
@@ -87,8 +85,8 @@ function greet() {
   console.log(this.name);
 }
 
-const person = { name: "Dave" };
-const boundGreet = greet.bind(person);
+const person3 = { name: "Dave" };
+const boundGreet = greet.bind(person3);
 boundGreet(); // Output: Dave
 
 // call and apply methods:
@@ -96,9 +94,9 @@ function greet(greeting) {
   console.log(`${greeting}, ${this.name}`);
 }
 
-const person = { name: "Eve" };
-greet.call(person, "Hello"); // Output: Hello, Eve
-greet.apply(person, ["Hi"]); // Output: Hi, Eve
+const person4 = { name: "Eve" };
+greet.call(person4, "Hello"); // Output: Hello, Eve
+greet.apply(person4, ["Hi"]); // Output: Hi, Eve
 
 // -------------------------------------------
 // This in Traditional Functions vs Arrow functions within objects

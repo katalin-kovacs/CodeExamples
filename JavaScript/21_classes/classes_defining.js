@@ -20,4 +20,5 @@ class Person {
 // Create an instance of the Person class
 const person1 = new Person("Alice", 30);
 
-console.log(person1.introduce()); // Output: Hello, my name is Alice and I am 30 years old.
+console.log(person1.introduce());
+// Output: Hello, my name is Alice and I am 30 years old.
