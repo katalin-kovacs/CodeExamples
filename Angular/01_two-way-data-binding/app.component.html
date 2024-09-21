@@ -1,0 +1,28 @@
+<!-- app.component.html -->
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <!-- Two-way data binding using ngModel -->
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Enter your name:</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="userName"
+      (ngModelChange)="updateImageUrl()"
+      name="userName"
+      required
+    />
+
+    <p>Your name is: {{ userName }}</p>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr />
+
+  <!-- Attribute binding to dynamically set the image URL -->
+  <h3>Dynamically Bound Image</h3>
+  <p class="cat">Type "Angular" in the name input.</p>
+  <img [src]="imageUrl" alt="Dynamic Image" width="150" />
+</div>
