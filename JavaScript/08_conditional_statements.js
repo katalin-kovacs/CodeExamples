@@ -7,7 +7,8 @@ if (number > 0) {
 }
 
 // else if Statement
-// The else if statement allows you to check multiple conditions. It follows an if statement and runs if the previous if condition(s) were false.
+// The else if statement allows you to check multiple conditions. It follows an if statement and runs
+// if the previous if condition(s) were false.
 // Use-case: Handling multiple mutually exclusive conditions.
 let number = 0;
 if (number > 0) {
@@ -19,8 +20,10 @@ if (number > 0) {
 }
 
 // switch Statement
-// The switch statement is used to perform different actions based on different conditions. It is often used as an alternative to multiple if...else if statements.
-// Use-case: Handling multiple potential values for a variable, especially when there are many discrete values to check.
+// The switch statement is used to perform different actions based on different conditions.
+// It is often used as an alternative to multiple if...else if statements.
+// Use-case: Handling multiple potential values for a variable, especially when
+// there are many discrete values to check.
 let day = 3; // Sunday = 0, Monday = 1, ..., Saturday = 6
 switch (day) {
   case 0:

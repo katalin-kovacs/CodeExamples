@@ -9,4 +9,12 @@ export class AppComponentEvents {
     const inputElement = event.target as HTMLInputElement;
     console.log(inputElement.value);
   }
+
+  preventNavigation(event: Event) {
+    event.preventDefault();
+  }
+
+  onChildNotification(message: string) {
+    console.log(message); // 'Child clicked!'
+  }
 }

@@ -14,7 +14,8 @@ while (i <= 5) {
 }
 
 // do...while Loop
-// Use-case: When you need to ensure the loop body executes at least once, like reading user input at least once.
+// Use-case: When you need to ensure the loop body executes at least once,
+// like reading user input at least once.
 let i = 1;
 do {
   console.log(i);

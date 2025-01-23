@@ -16,7 +16,8 @@ function greet(name: string): string {
 console.log(greet("Alice")); // Output: Hello, Alice
 
 // Trying to pass a number will cause a TypeScript error
-// console.log(greet(123)); // Error: Argument of type 'number' is not assignable to parameter of type 'string'
+// console.log(greet(123)); // Error: Argument of type 'number'
+// is not assignable to parameter of type 'string'
 
 //--------------------------------------------------------
 // Interfaces in TypeScript
